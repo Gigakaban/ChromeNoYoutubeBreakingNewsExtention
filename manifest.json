@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "No more Breaking News",
+    "version": "1.0",
+    "description": "Delete this silly stupid block from youtube website.",
+    "icons": {
+        "16":"icons/icon.png",
+        "32":"icons/icon.png",
+        "48":"icons/icon.png",
+        "128":"icons/icon.png"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
